@@ -2,8 +2,9 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
+  "bin": "./bin/gendiff.js",
   "description": "[![Actions Status](https://github.com/mammoth90/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mammoth90/frontend-project-46/actions)",
-  "main": "index.js",
+  "main": "./src/process.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

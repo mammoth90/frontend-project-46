@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout working-directory
-        uses: action/checkou@v4
+        uses: action/checkout@v4
 
       - name: Setup Node.js
-        uses: action/stup-node@v4
+        uses: action/setup-node@v4
         with:
           node-version: 20
 

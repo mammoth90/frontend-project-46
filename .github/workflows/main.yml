@@ -1,1 +1,11 @@
-
+name: main
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkou@v4
+      - run: ls
+      - run: make lint
+      - run: make test
+  

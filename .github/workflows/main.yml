@@ -19,7 +19,7 @@ jobs:
         run: make lint
         
       - name: Start test 
-        run: make test 
+        run: npm test 
         
       - name: SonarCloud Scan 
         uses: SonarSource/sonarcloud-github-action@v2

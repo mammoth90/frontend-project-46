@@ -23,7 +23,8 @@ jobs:
         
       - name: SonarCloud Scan 
         uses: SonarSource/sonarcloud-github-action@v2
-        with: >
+        with:
+          args: >
           -Dsonar.projectKey=mammoth90_frontend-project-46
           -Dsonar.organization=mammoth90
           -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info

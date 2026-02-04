@@ -27,9 +27,6 @@ jobs:
           args: >
             -Dsonar.projectKey=mammoth90_frontend-project-46
             -Dsonar.organization=mammoth90
-            -Dsonar.projectBaseDir=.
-            -Dsonar.sources=src
-            -Dsonar.tests=__tests__
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 

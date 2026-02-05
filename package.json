@@ -4,18 +4,20 @@
   "type": "module",
   "env.jest": true,
   "bin": {
-   "gendiff": "bin/gendiff.js"
+    "gendiff": "bin/gendiff.js"
   },
   "description": "[![Actions Status](https://github.com/mammoth90/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mammoth90/frontend-project-46/actions)",
   "main": "./src/process.js",
   "scripts": {
-   "test": "jest --coverage"
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "commander": "^14.0.2",
-    "lodash": "^4.17.23"
+    "lodash": "^4.17.23",
+    "prettier": "^3.8.1",
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",

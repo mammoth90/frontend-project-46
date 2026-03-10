@@ -11,23 +11,23 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.node
-      }
-    }
+        ...globals.node,
+      },
+    },
   },
 
   {
     files: ['**/*.test.js', '**/__tests__/**/*.js'],
     plugins: {
-      jest
+      jest,
     },
     languageOptions: {
       globals: {
-        ...globals.jest
-      }
+        ...globals.jest,
+      },
     },
     rules: {
-      'no-undef': 'off'
-    }
-  }
+      'no-undef': 'off',
+    },
+  },
 ]

@@ -32,7 +32,7 @@ const printLeaf = (currentNode, depth, replacer) => {
   }
 }
 
-const stylish = (tree, replacer = ' ') => {
+export default (tree, replacer = ' ') => {
   const step = 2
   const iter = (tree, depth = 2) => {
     let printedTree = ''
@@ -66,14 +66,4 @@ const stylish = (tree, replacer = ' ') => {
   }
   const result = iter(tree)
   return `{\n${result}}\n`
-}
-
-export const formater = (tree, format = 'stylish') => {
-  switch (format) {
-    case 'stylish':
-      return stylish(tree)
-
-    default:
-      return stylish(tree)
-  }
 }

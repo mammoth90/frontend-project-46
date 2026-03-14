@@ -2,7 +2,7 @@ import { readingFile } from './readFile.js'
 import path from 'path'
 import parser from './parsers.js'
 import { buildTree } from './buildTree.js'
-import { formater } from './formater.js'
+import { formater } from './formater/index.js'
 
 export default function (file1, file2, format) {
   const dataFile1 = readingFile(file1)

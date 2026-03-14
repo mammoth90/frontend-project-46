@@ -13,11 +13,12 @@ programm
 
 programm.option('-f, --format [type]', 'output format', 'stylish')
 
-programm.action((filepath1, filepath2, format) => {
+programm.action((filepath1, filepath2, options) => {
+  const { format } = options
   const file1 = path.resolve(process.cwd(), filepath1)
   const file2 = path.resolve(process.cwd(), filepath2)
   const result = genDiff(file1, file2, format)
-  console.log(`gendiff ${filepath1} ${filepath2}`)
+  console.log(`gendiff --format ${format} ${filepath1} ${filepath2}\n`)
   console.log(result)
 })
 

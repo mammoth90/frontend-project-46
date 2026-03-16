@@ -51,7 +51,8 @@ const buildSimpleTree = (data) => {
 const maping = (key, data1, data2) => {
   if (!_.isObject(data1[key]) && !_.isObject(data2[key])) {
     return makeNote(key, data1, data2)
-  } else if (_.isObject(data1[key]) && _.isObject(data2[key])) {
+  }
+  else if (_.isObject(data1[key]) && _.isObject(data2[key])) {
     if (_.has(data1, key) && _.has(data2, key)) {
       return {
         key,
@@ -76,7 +77,8 @@ const maping = (key, data1, data2) => {
         value: buildSimpleTree(data1[key]),
       }
     }
-  } else {
+  }
+  else {
     if (_.has(data1, key) && !_.has(data2, key)) {
       return {
         key,

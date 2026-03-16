@@ -5,7 +5,8 @@ export default function (file, type) {
     case '.json':
       try {
         return JSON.parse(file)
-      } catch {
+      }
+      catch {
         throw new Error('Invalid JSON file')
       }
 
@@ -13,7 +14,8 @@ export default function (file, type) {
     case '.yml':
       try {
         return parse(file)
-      } catch {
+      }
+      catch {
         throw new Error('Invalid YAML file')
       }
     default:

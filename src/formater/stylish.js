@@ -34,7 +34,8 @@ export default (tree, replacer = ' ') => {
       let { nested } = tree[i]
       if (nested === false) {
         printedTree += printLeaf(tree[i], depth, replacer)
-      } else if (nested === true) {
+      }
+      else if (nested === true) {
         if (_.has(tree[i], 'children')) {
           let { children, key } = tree[i]
           printedTree += `${replacer.repeat(depth)}  ${key}: {\n${iter(children, depth + step + 2)}${replacer.repeat(depth + 2)}}\n`
@@ -46,7 +47,8 @@ export default (tree, replacer = ' ') => {
         if (type === 'removed') {
           printedTree += `${replacer.repeat(depth)}- ${key}: {\n${iter(value, depth + step + 2)}${replacer.repeat(depth + 2)}}\n`
         }
-      } else {
+      }
+      else {
         let { value, newValue, key } = tree[i]
         printedTree += _.isObject(value)
           ? `${replacer.repeat(depth)}- ${key}: {\n${iter(value, depth + step + 2)}${replacer.repeat(depth + 2)}}\n`

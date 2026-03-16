@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-const trueValue = (value) => (typeof value === 'string' ? `'${value}'` : value)
+const trueValue = value => (typeof value === 'string' ? `'${value}'` : value)
 
 const printLeaf = (currentNode, mainKey) => {
   let node = ''
@@ -35,7 +35,8 @@ export default (tree) => {
       let { nested } = tree[i]
       if (nested === false) {
         printedTree += printLeaf(tree[i], mainKey)
-      } else if (nested === true) {
+      }
+      else if (nested === true) {
         if (_.has(tree[i], 'children')) {
           let { children, key } = tree[i]
           printedTree += `${iter(children, [...mainKey, key])}`
@@ -49,7 +50,8 @@ export default (tree) => {
           const currentKey = `${[...mainKey, key].join('.')}`
           printedTree += `Property '${currentKey}' was removed\n`
         }
-      } else {
+      }
+      else {
         let { value, newValue, key } = tree[i]
         const currentKey = `${[...mainKey, key].join('.')}`
         printedTree += _.isObject(value)

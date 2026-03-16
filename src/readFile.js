@@ -5,7 +5,8 @@ export const readingFile = (file) => {
   try {
     data = fs.readFileSync(file, 'utf-8')
     return data
-  } catch {
+  }
+  catch {
     throw new Error(`Can't read file ${file}! It may be broken or not exists`)
   }
 }

@@ -122,6 +122,5 @@ export const buildTree = (data1, data2) => {
   const tree = _.sortBy(_.union(keys1, keys2)).map((key) => {
     return maping(key, data1, data2)
   })
-
   return tree
 }

@@ -18,6 +18,7 @@ const yamlFile1 = getFixturePath('file1.yaml')
 const yamlFile2 = getFixturePath('file2.yml')
 const expectedResult2 = readingFile(getFixturePath('result3.txt'))
 const expectedPlain = readingFile(getFixturePath('resultPlain.txt'))
+const expectedJSON = readingFile(getFixturePath('resultJSON.txt'))
 
 test('gendiff JSON', () => {
   expect(genDiff(jsonFile1, jsonFile2)).toEqual(expectedResult)
@@ -27,10 +28,14 @@ test('gendiff YAML', () => {
   expect(genDiff(yamlFile1, yamlFile2)).toEqual(expectedResult)
 })
 
-test('NESTED gendiff JSON STYLISH', () => {
+test('NESTED gendiff STYLISH', () => {
   expect(genDiff(jsonFile3, jsonFile4, 'stylish')).toEqual(expectedResult2)
 })
 
-test('NESTED gendiff JSON TEST', () => {
+test('NESTED gendiff PLAIN', () => {
   expect(genDiff(jsonFile3, jsonFile4, 'plain')).toEqual(expectedPlain)
+})
+
+test('NESTED gendiff JSON ', () => {
+  expect(genDiff(jsonFile3, jsonFile4, 'json')).toEqual(expectedJSON.trim())
 })

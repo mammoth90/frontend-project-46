@@ -59,5 +59,5 @@ export default (tree, replacer = ' ') => {
     return printedTree
   }
   const result = iter(tree)
-  return `{\n${result}}\n`
+  return `{\n${result}}`
 }

@@ -60,5 +60,5 @@ export default (tree) => {
     return printedTree
   }
   const result = iter(tree, [])
-  return result
+  return result.trim()
 }
